@@ -1,0 +1,51 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ─── Virtual Environment ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+
+# ─── Model (binary — regenerate with train.py) ────────────────────────────────
+models/model.pkl
+models/*.pkl.*.bak
+models/*.onnx
+
+# ─── Data (raw captures & processed CSVs — generated at runtime) ──────────────
+data/raw/
+data/processed/
+data/unsw_cache/
+data/master_training.csv
+
+# Keep the sample synthetic dataset
+!data/sample_dataset.csv
+
+# ─── Test Cache ───────────────────────────────────────────────────────────────
+.pytest_cache/
+__pycache__/
+
+# ─── Logs (generated at runtime) ──────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Secrets / Environment ────────────────────────────────────────────────────
+.env
+*.env
+
+# ─── OS Junk ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

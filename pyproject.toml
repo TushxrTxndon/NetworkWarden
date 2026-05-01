@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "networkwarden"
+version = "3.0.0"
+description = "AI-powered Network Intrusion Detection System for Raspberry Pi"
+requires-python = ">=3.9"
+dependencies = [
+    "scapy",
+    "scikit-learn",
+    "pandas",
+    "numpy",
+    "joblib",
+    "requests",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.scripts]
+nw-train = "scripts.train:train_model"
+nw-infer = "scripts.infer:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*"]
